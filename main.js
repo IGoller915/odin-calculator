@@ -25,6 +25,7 @@ function buttonPush(e) {
     }
 
     if (this.classList.contains('operator')) {
+        if (storedNumber == null && currentNumber == null) return //operator pushed before anything else
         if (storedNumber == null && currentNumber != null){ //initial operator push after clear
             currentOperator = this.textContent
             storedNumber = currentNumber
